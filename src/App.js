@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route ,Link } from "react-router-dom";
+import Student from "./components/Students";
+import Contact from "./components/Contact";
+import Detail from "./components/Detail"
+import Home from "./components/Home";
+import Editstudent from "./components/EditStudent";
+import AddStudent from "./components/AddStudent";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Detail>
+      <div className="App">
+        <Router>
+          <div class="navbar navbar-expand-lg bg-dark" id='navBar'>
+          <div style={{color:"magenta" ,marginRight:"30vw", fontSize:"150%"}}> SAMRAT</div>
+          <div><Link to="/"><button className='btn btn-outline-light'>Home </button></Link></div>
+          <div><Link to={'/student'}><button className='btn btn-outline-light'>Student </button></Link></div>
+          <div><Link to={'contact'}><button className='btn btn-outline-light'>Contact  </button></Link></div>
+      </div>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/student" element={<Student />} />
+            <Route path="/student/add/:id" element={<AddStudent />} />
+            <Route path="/student/edit/:id" element={<Editstudent />} />
+            <Route path="/contact" element={<Contact/>} />
+          </Routes>
+        </Router>
+      </div>
+    </Detail>
   );
 }
 

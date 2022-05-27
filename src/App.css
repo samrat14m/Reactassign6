@@ -1,38 +1,109 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto+Slab:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luxurious+Roman&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App{
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(to bottom, grey , lightgray);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Navbar {
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+    padding: 15px 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.link {
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+    font-family: 'Lobster', cursive;
 }
 
-.App-link {
-  color: #61dafb;
+.Home, .Contact {
+    height: 90vh;
+    text-align: center;
+    padding: 14%;
+    font-size: 100px;
+    color: black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Students {
+    margin: 50px;
+}
+
+.students-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    
+}
+
+.students-header h1 {
+  font-family: 'Luxurious Roman', cursive;
+    font-size: 40px;
+}
+
+#student-btn {
+    background-color: white;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 10px 40px;
+    border: 1px solid black;
+    border-radius: 30px;
+    margin-top: 6px;
+    cursor: pointer;
+}
+
+#student-btn:hover {
+    background-color: black;
+    color: white;
+}
+
+.input-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 70%;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+.input-container .input {
+    width: 25em;
+    margin: 50px 40px;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10%;
+}
+
+.cancel-btn, .submit-btn {
+    margin: 20px;
+    padding: 10px 60px;
+    border: 1px solid black;
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cancel-btn:hover {
+    background-color: black;
+    color: red;
+}
+
+.submit-btn:hover {
+    background-color: black;
+    color: white;
 }
